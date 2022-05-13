@@ -7,7 +7,6 @@ To install all the node libraries.
 
 Add a .env file which has the following code
 
-PORT=3000
-
-REDIS_HOST=localhost
-REDIS_PORT=6379
+`PORT=3000`
+`REDIS_HOST=localhost`
+`REDIS_PORT=6379`
