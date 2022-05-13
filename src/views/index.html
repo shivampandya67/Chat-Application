@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .mainBody {
+            background-color: moccasin;
+        }
+
+        .container {
+            width: 777px;
+            margin: 0 auto;
+        }
+
+        .messages {
+            background-color: white;
+            border: 1px solid darkgrey;
+            border-bottom: none;
+            width: 100%;
+            height: 700px;
+            overflow: scroll;
+        }
+
+        #message {
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+
+        .chat {
+            display: none;
+        }
+
+        .msg {
+            width: 100%;
+        }
+
+        .user {
+            float: left;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Chat Application</title>
+</head>
+
+<body class="mainBody">
+    <div class="container">
+        <h1 style="color: maroon;text-align: center;">Chat Application</h1>
+        <div class="join-chat" style="text-align: center;">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" name="username" />
+            <input type="button" class="btn btn-primary" id="joinChat" value="Join Chat" />
+        </div><br />
+        <div class="chat-info" style="color: maroon;text-align: center;"></div><br />
+        <div class="chat">
+            <div class="messages"></div>
+            <textarea name="message" id="message" cols="90" rows="2"
+                placeholder="Enter your message..."></textarea><br /><br />
+            <input type="button" class="btn btn-primary" id="sendMessage" data-username="" value="Send Message"
+                style="margin-left: 550px;">
+            <input type="button" class="btn btn-danger" id="leaveChat" data-username="" value="Leave Chat">
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.6.0/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../static/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
